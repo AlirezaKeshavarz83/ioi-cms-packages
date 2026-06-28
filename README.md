@@ -81,16 +81,16 @@ Each release contains a single tarball with all 6 tasks for that year's IOI, plu
 
 | Year | Tasks | Notes |
 |------|-------|-------|
-| [IOI 2016](../../releases/tag/ioi2016) | aliens, messy, molecules, paint, railroad, shortcut | [NOTES-2016.md](NOTES-2016.md) |
-| [IOI 2017](../../releases/tag/ioi2017) | books, nowruz, prize, simurgh, train, wiring | [NOTES-2017.md](NOTES-2017.md) |
-| [IOI 2018](../../releases/tag/ioi2018) | combo, doll, highway, meetings, seats, werewolf | [NOTES-2018.md](NOTES-2018.md) |
-| [IOI 2019](../../releases/tag/ioi2019) | line, rect, shoes, split, vision, walk | [NOTES-2019.md](NOTES-2019.md) |
-| [IOI 2020](../../releases/tag/ioi2020) | biscuits, mushrooms, plants, stations, supertrees, tickets | [NOTES-2020.md](NOTES-2020.md) |
-| [IOI 2021](../../releases/tag/ioi2021) | candies, dna, dungeons, keys, parks, registers | [NOTES-2021.md](NOTES-2021.md) |
-| [IOI 2022](../../releases/tag/ioi2022) | circuit, fish, insects, islands, prison, towers | [NOTES-2022.md](NOTES-2022.md) |
-| [IOI 2023](../../releases/tag/ioi2023) | beechtree, closing, longesttrip, overtaking, robot, soccer | [NOTES-2023.md](NOTES-2023.md) |
-| [IOI 2024](../../releases/tag/ioi2024) | hieroglyphs, message, mosaic, nile, sphinx, tree | [NOTES-2024.md](NOTES-2024.md) |
-| [IOI 2025](../../releases/tag/ioi2025) | festival, migrations, obstacles, souvenirs, triples, worldmap | [NOTES-2025.md](NOTES-2025.md) |
+| [IOI 2016](../../releases/tag/ioi2016) | aliens, messy, molecules, paint, railroad, shortcut | [NOTES-2016.md](notes/NOTES-2016.md) |
+| [IOI 2017](../../releases/tag/ioi2017) | books, nowruz, prize, simurgh, train, wiring | [NOTES-2017.md](notes/NOTES-2017.md) |
+| [IOI 2018](../../releases/tag/ioi2018) | combo, doll, highway, meetings, seats, werewolf | [NOTES-2018.md](notes/NOTES-2018.md) |
+| [IOI 2019](../../releases/tag/ioi2019) | line, rect, shoes, split, vision, walk | [NOTES-2019.md](notes/NOTES-2019.md) |
+| [IOI 2020](../../releases/tag/ioi2020) | biscuits, mushrooms, plants, stations, supertrees, tickets | [NOTES-2020.md](notes/NOTES-2020.md) |
+| [IOI 2021](../../releases/tag/ioi2021) | candies, dna, dungeons, keys, parks, registers | [NOTES-2021.md](notes/NOTES-2021.md) |
+| [IOI 2022](../../releases/tag/ioi2022) | circuit, fish, insects, islands, prison, towers | [NOTES-2022.md](notes/NOTES-2022.md) |
+| [IOI 2023](../../releases/tag/ioi2023) | beechtree, closing, longesttrip, overtaking, robot, soccer | [NOTES-2023.md](notes/NOTES-2023.md) |
+| [IOI 2024](../../releases/tag/ioi2024) | hieroglyphs, message, mosaic, nile, sphinx, tree | [NOTES-2024.md](notes/NOTES-2024.md) |
+| [IOI 2025](../../releases/tag/ioi2025) | festival, migrations, obstacles, souvenirs, triples, worldmap | [NOTES-2025.md](notes/NOTES-2025.md) |
 
 ## Package Format
 
