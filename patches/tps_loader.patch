@@ -1,0 +1,34 @@
+diff --git a/cmscontrib/loaders/tps.py b/cmscontrib/loaders/tps.py
+index aacbea9..eb2cfef 100644
+--- a/cmscontrib/loaders/tps.py
++++ b/cmscontrib/loaders/tps.py
+@@ -95,9 +95,19 @@ class TpsTaskLoader(TaskLoader):
+ 
+         if task_type == 'Communication':
+             par_processes = '%s_num_processes' % par_prefix
++            par_compilation = '%s_compilation' % par_prefix
++            par_user_io = '%s_user_io' % par_prefix
+             if par_processes not in task_type_parameters:
+                 task_type_parameters[par_processes] = 1
+-            return [task_type_parameters[par_processes], "stub", "fifo_io"]
++            if par_compilation not in task_type_parameters:
++                task_type_parameters[par_compilation] = 'stub'
++            if par_user_io not in task_type_parameters:
++                task_type_parameters[par_user_io] = 'std_io'
++            return [
++                task_type_parameters[par_processes],
++                task_type_parameters[par_compilation],
++                task_type_parameters[par_user_io],
++            ]
+ 
+         if task_type == 'TwoSteps' or task_type == 'OutputOnly':
+             return [evaluation_param]
+@@ -173,7 +183,7 @@ class TpsTaskLoader(TaskLoader):
+         if data["task_type"] == 'OutputOnly':
+             args["submission_format"] = list()
+             for codename in testcase_codenames:
+-                args["submission_format"].append("%s.out" % codename)
++                args["submission_format"].append("output_%s.txt" % codename)
+         elif data["task_type"] == 'Notice':
+             args["submission_format"] = list()
+         else:
