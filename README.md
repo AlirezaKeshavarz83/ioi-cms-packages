@@ -124,22 +124,6 @@ The `make_contest.sh` script handles everything:
 2. Imports each task with `cmsImportTask -L tps_task`
 3. Assigns tasks to their respective contest (Day 1 or Day 2)
 
-To re-import a single task after changes:
-```bash
-source ~/.cms_venv/bin/activate
-python3 -m cmscontrib.ImportTask --update-task --task-name <task_name> path/to/<task_name>/
-```
-
-## Submitting Solutions
-
-```bash
-source ~/.cms_venv/bin/activate
-python3 -m cmscontrib.AddSubmission <username> <task_name> \
-    -c <contest_id> \
-    -f "<task_name>.%l:path/to/solution.cpp"
-```
-
-Evaluation happens automatically if `cmsResourceService` is running.
 
 ## Sources
 
