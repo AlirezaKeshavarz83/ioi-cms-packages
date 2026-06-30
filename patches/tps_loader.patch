@@ -1,8 +1,15 @@
 diff --git a/cmscontrib/loaders/tps.py b/cmscontrib/loaders/tps.py
-index aacbea9..eb2cfef 100644
 --- a/cmscontrib/loaders/tps.py
 +++ b/cmscontrib/loaders/tps.py
-@@ -95,9 +95,19 @@ class TpsTaskLoader(TaskLoader):
+@@ -26,6 +26,7 @@
+ from datetime import timedelta
+ 
+ from cms.db import Task, Dataset, Manager, Testcase, Attachment, Statement
++from cmscommon.constants import SCORE_MODE_MAX_SUBTASK
+ from .base_loader import TaskLoader
+ 
+ 
+@@ -95,9 +96,19 @@
  
          if task_type == 'Communication':
              par_processes = '%s_num_processes' % par_prefix
@@ -23,7 +30,7 @@ index aacbea9..eb2cfef 100644
  
          if task_type == 'TwoSteps' or task_type == 'OutputOnly':
              return [evaluation_param]
-@@ -173,7 +183,7 @@ class TpsTaskLoader(TaskLoader):
+@@ -173,7 +184,7 @@
          if data["task_type"] == 'OutputOnly':
              args["submission_format"] = list()
              for codename in testcase_codenames:
@@ -32,3 +39,12 @@ index aacbea9..eb2cfef 100644
          elif data["task_type"] == 'Notice':
              args["submission_format"] = list()
          else:
+@@ -206,6 +217,8 @@
+         args['min_submission_interval'] = make_timedelta(60)
+         args['min_user_test_interval'] = make_timedelta(60)
+ 
++        args['score_mode'] = SCORE_MODE_MAX_SUBTASK
++
+         task = Task(**args)
+ 
+         args = dict()

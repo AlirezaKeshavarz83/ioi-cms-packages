@@ -25,7 +25,7 @@ cd ioi2024-cms151
 
 ### Required CMS Patch: TPS Loader
 
-Two bugs in the stock CMS v1.5.1 TPS loader (`cmscontrib/loaders/tps.py`) must be fixed before importing:
+Three issues in the stock CMS v1.5.1 TPS loader (`cmscontrib/loaders/tps.py`) must be fixed before importing:
 
 **1. OutputOnly submission format** (affects IOI 2017 `nowruz`, IOI 2019 `line`):
 
@@ -68,7 +68,25 @@ The loader hardcodes `"stub"` and `"fifo_io"` for all Communication tasks, ignor
 +            ]
 ```
 
-A unified patch file (`tps_loader.patch`) combining both fixes is included in the repo under `patches/` and as a standalone file in each release tarball. Apply it with:
+**3. Score mode not set** (affects all tasks):
+
+The loader does not set `score_mode`, so CMS uses its default instead of the IOI-standard "max score per subtask" mode. Without this fix, scoring may not match IOI rules.
+
+```diff
+--- a/cmscontrib/loaders/tps.py
++++ b/cmscontrib/loaders/tps.py
+@@ -206,6 +217,8 @@
+         args['min_submission_interval'] = make_timedelta(60)
+         args['min_user_test_interval'] = make_timedelta(60)
+ 
++        args['score_mode'] = SCORE_MODE_MAX_SUBTASK
++
+         task = Task(**args)
+```
+
+(Also adds `from cmscommon.constants import SCORE_MODE_MAX_SUBTASK` to the imports.)
+
+A unified patch file (`tps_loader.patch`) combining all three fixes is included in the repo under `patches/` and as a standalone file in each release tarball. Apply it with:
 
 ```bash
 cd /path/to/cms
