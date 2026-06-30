@@ -2,7 +2,7 @@
 
 **Source:** Official IOI 2025 TPS packages.
 
-**Host country:** Bolivia (Santa Cruz de la Sierra).
+**Host country:** Bolivia (Sucre).
 
 ## What was done
 
